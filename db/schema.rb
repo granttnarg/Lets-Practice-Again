@@ -10,9 +10,36 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2019_11_20_142956) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "notes", force: :cascade do |t|
+    t.date "date"
+    t.integer "prac_bpm"
+    t.text "description"
+    t.integer "bar_progress"
+    t.integer "rating"
+    t.bigint "song_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["song_id"], name: "index_notes_on_song_id"
+  end
+
+  create_table "songs", force: :cascade do |t|
+    t.string "name"
+    t.string "artist"
+    t.integer "native_bpm"
+    t.date "date_uploaded"
+    t.text "info"
+    t.string "sheet_music"
+    t.string "key"
+    t.string "chords"
+    t.string "time_signature"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_foreign_key "notes", "songs"
 end

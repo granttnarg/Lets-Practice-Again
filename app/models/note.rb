@@ -5,4 +5,4 @@ class Note < ApplicationRecord
 #   validates :prac_bpm, presence: true
 #   validates :bar_progress, presence: true
 #   validates :rating, presence: true, :inclusion => { :in => 1..5 }
-# end
+end

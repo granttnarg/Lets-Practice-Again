@@ -4,19 +4,20 @@ class MainController < ApplicationController
   def index; end
 
   def search
-      name_songs = Song.ransack(name_cont: params[:q]).result(distinct: true)
-      artist_songs = Song.ransack(artist_cont: params[:q]).result(distinct: true)
-      key_songs = Song.ransack(key_cont: params[:q]).result(distinct: true)
-      info_songs = Song.ransack(info_cont: params[:q]).result(distinct: true)
-      bpm_songs = Song.ransack(native_bpm_cont: params[:q]).result(distinct: true)
+      # name_songs = Song.ransack(name_cont: params[:q]).result(distinct: true)
+      # artist_songs = Song.ransack(artist_cont: params[:q]).result(distinct: true)
+      # key_songs = Song.ransack(key_cont: params[:q]).result(distinct: true)
+      # info_songs = Song.ransack(info_cont: params[:q]).result(distinct: true)
+      # bpm_songs = Song.ransack(native_bpm_cont: params[:q]).result(distinct: true)
 
-      # @songs = name_songs.or(artist_songs).or(key_songs).or(info_songs)
-      @songs = Song.where("name LIKE ? or artist LIKE ? or key LIKE ? or info LIKE ? or native_bpm >= ?",
-        "%#{params[:q]}%",
-        "%#{params[:q]}%",
-        "%#{params[:q]}%",
-        "%#{params[:q]}%",
-         "#{params[:q]}")
+      @songs = Song.where("name LIKE ?", "Eric")
+      # @songs = Song.where("name LIKE ? or artist LIKE ? or key LIKE ? or info LIKE ? or native_bpm >= ?",
+      #   "%#{params[:q]}%",
+      #   "%#{params[:q]}%",
+      #   "%#{params[:q]}%",
+      #   "%#{params[:q]}%",
+      #    "#{params[:q]}")
+      # binding.pry
   end
 
   private

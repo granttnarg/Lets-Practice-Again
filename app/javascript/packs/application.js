@@ -20,8 +20,7 @@ import 'bootstrap';
 // import revealComments from './reveal_comments';
 // import openNav from './side_bar';
 
-import Dashboard from "dashboard";
-
+import Dashboard from "./dashboard";
 
 // ReactDOM.render(
 //     <Dashboard />, document.getElementById("results-div"));

@@ -3,12 +3,15 @@
 // of the page.
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
+import $ from 'jquery'
 import {Image, Video, Transformation, CloudinaryContext} from 'cloudinary-react';
 
 class Dashboard extends Component {
 
   constructor(props) {
     super(props);
+
+    _isMounted = false;
 
     this.state = {
       term: '',
@@ -68,9 +71,11 @@ class Dashboard extends Component {
 // document.addEventListener('turbolinks:load', (e) => {
   ReactDOM.render(
     <Dashboard />, document.getElementById("results-div"))
-// });
+
+  export default Dashboard;
 
 
-export default Dashboard;
+
 
 // document.body.appendChild(document.createElement('div')
+

@@ -28,8 +28,14 @@ import Dashboard from "./dashboard";
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import './index.css';
-// import Metronome from './Metronome';
+import Metronome from './Metronome';
 // import registerServiceWorker from './registerServiceWorker';
+console.log("yupyupyup")
 
-// ReactDOM.render(<Metronome/>, document.getElementById('metro'));
+// document.addEventListener('turbolinks:load', (e) => {
+  if (true) {
+    console.log("rending Metronome");
+  ReactDOM.render(<Metronome/>, document.getElementById('metro'));
+}
+// });
 // registerServiceWorker();

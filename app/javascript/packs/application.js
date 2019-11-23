@@ -30,12 +30,12 @@ import ReactDOM from 'react-dom';
 // import './index.css';
 import Metronome from './Metronome';
 // import registerServiceWorker from './registerServiceWorker';
-console.log("yupyupyup")
+
 
 // document.addEventListener('turbolinks:load', (e) => {
-  if (true) {
-    console.log("rending Metronome");
-  ReactDOM.render(<Metronome/>, document.getElementById('metro'));
-}
+//   if (true) {
+//     console.log("rending Metronome");
+//   ReactDOM.render(<Metronome/>, document.getElementById('metro'));
+// }
 // });
 // registerServiceWorker();

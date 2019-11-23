@@ -22,4 +22,3 @@ class NotesController < ApplicationController
     params.require(:note).permit(:description, :bar_progress, :rating, :date, :prac_bpm)
   end
 end
-

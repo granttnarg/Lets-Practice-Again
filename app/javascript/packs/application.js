@@ -28,7 +28,7 @@ import Dashboard from "./dashboard";
 import React from 'react';
 import ReactDOM from 'react-dom';
 // import './index.css';
-import Metronome from './Metronome';
+import Metronome from './metronome';
 // import registerServiceWorker from './registerServiceWorker';
 
 

@@ -31,7 +31,8 @@ class MainController < ApplicationController
 
   before_action :force_json, only: :search
 
-  def index; end
+  def index
+  end
 
   def search
         @songs = Song.where("LOWER(name) LIKE ? or LOWER(artist) LIKE ? or LOWER(key) LIKE ? or LOWER(info) LIKE ?", "%#{params[:q]}%", "%#{params[:q]}%", "%#{params[:q]}%", "%#{params[:q]}%")

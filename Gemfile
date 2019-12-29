@@ -8,6 +8,7 @@ gem 'puma'
 gem 'rails', '5.2.3'
 gem 'redis'
 
+
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
 gem 'sassc-rails'
@@ -26,6 +27,7 @@ end
 
 group :development, :test do
   gem 'pry-byebug'
+  gem 'rspec-rails', '~> 3.0'
   gem 'pry-rails'
   gem 'listen', '~> 3.0.5'
   gem 'spring'
